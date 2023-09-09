@@ -7,7 +7,9 @@ React project, requirements by Hacker U.
 - terminal A: cd server -> 
   - run 'npm install'
   - run 'node server'
-- terminal B: run 'npm start'
+- terminal B: 
+  - run 'npm install'
+  - run 'npm start'
 
 # Admin User 
 - email: moshek.system.user@gmail.com
