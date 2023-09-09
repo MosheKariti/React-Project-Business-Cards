@@ -34,10 +34,10 @@ export function SignInPage({setMenu,setLoggedInUser, setToast}) {
                 setLoggedInUser(userDataResponse);
                 setToast(toast.success(`Welcome ${userDataResponse.name.first}!`))
                 if (userDataResponse.isAdmin === true) {
-                    navigate('/home', {replace: true});
+                    navigate('/crm', {replace: true});
                     setMenu(adminMenu);
                 } else if (userDataResponse.isBusiness === true) {
-                    navigate('/crm', {replace: true});
+                    navigate('/home', {replace: true});
                     setMenu(businessMenu);
                 } else if (!userDataResponse.isBusiness && !userDataResponse.isAdmin){
                     navigate('/home', {replace: true});

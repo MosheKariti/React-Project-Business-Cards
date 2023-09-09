@@ -4,7 +4,8 @@ React project, requirements by Hacker U.
 - The Server side was made by Hacker U.
 
 **Installations:**
-- terminal A: cd server -> 
+- terminal A:
+  - cd server
   - run 'npm install'
   - run 'node server'
 - terminal B: 
