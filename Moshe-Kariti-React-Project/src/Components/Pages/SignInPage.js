@@ -33,15 +33,15 @@ export function SignInPage({setMenu,setLoggedInUser, setToast}) {
                 const userDataResponse = await login(post);
                 setLoggedInUser(userDataResponse);
                 setToast(toast.success(`Welcome ${userDataResponse.name.first}!`))
-                if (userDataResponse.isBusiness === true) {
-                        navigate('/home', {replace: true});
-                        setMenu(businessMenu);
-                } else if (userDataResponse.isAdmin === true) {
-                        navigate('/crm', {replace: true});
-                        setMenu(adminMenu);
+                if (userDataResponse.isAdmin === true) {
+                    navigate('/home', {replace: true});
+                    setMenu(adminMenu);
+                } else if (userDataResponse.isBusiness === true) {
+                    navigate('/crm', {replace: true});
+                    setMenu(businessMenu);
                 } else if (!userDataResponse.isBusiness && !userDataResponse.isAdmin){
-                        navigate('/home', {replace: true});
-                        setMenu(simpleMenu);
+                    navigate('/home', {replace: true});
+                    setMenu(simpleMenu);
                 }
             } catch (error) {
                 HandleFailedEntries(post.email,setToast);
