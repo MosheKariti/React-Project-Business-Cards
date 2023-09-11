@@ -31,13 +31,6 @@ All bonuses were developed.
 - User block after 3 failed entries
   - there is no API in the server for that logic, I developed it using localStorage (currently not supported with multi devices)
 
-
-**Known issues**
-- Server
-  - In update user, the server does not validate the required fields.
-- Client
-  - Some creation modals does not include validation error for part of the fields (according to the requirements), in such case I throw the server error.
-
 **Work Methods**
 - Global states are created in App.js (I do not use Redux).
 - Server requests using Axios.
@@ -45,3 +38,11 @@ All bonuses were developed.
   - MUI
   - React icons
   - React router
+
+**Known issues**
+- Server
+  - In update user, the server does not validate the required fields.
+- Client
+  - Some creation modals does not include validation error for part of the fields (according to the requirements), in such case I throw the server error.
+  - UI issues on MAC
+
