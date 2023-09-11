@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter } from "react-router-dom";
-import Router from "./Components/Router/Router";
-import {Header} from "./Components/Main/Header";
-import {Footer} from "./Components/Main/Footer";
+import Router from "./components/Router/Router";
+import {Header} from "./components/Main/Header";
+import {Footer} from "./components/Main/Footer";
 import {useEffect, useState} from "react";
-import {guestMenu, adminMenu, businessMenu, simpleMenu} from "./Services/Menu/MenusHandler";
-import "./Styles/homePage.css"
-import "./Styles/cards.css"
-import "./Styles/components.css"
-import {initDb} from "./Services/FirstRun/initDb";
-import {HandleAccessToken} from "./Services/Users/HandleAccessToken";
+import {guestMenu, adminMenu, businessMenu, simpleMenu} from "./services/menu/menusHandler";
+import "./styles/homePage.css"
+import "./styles/cards.css"
+import "./styles/components.css"
+import {initDb} from "./services/firstRun/initDb";
+import {handleAccessToken} from "./services/users/handleAccessToken";
 import {ToastContainer} from "react-toastify";
 
 
@@ -22,7 +22,7 @@ function App() {
     const [path,setPath] = useState(location.path);
     const [loggedInUser,setLoggedInUser] = useState(undefined);
     useEffect(()=>{
-        HandleAccessToken()
+        handleAccessToken()
             .then(userResponse => {
                 setLoggedInUser(userResponse);
                 if (userResponse) {
